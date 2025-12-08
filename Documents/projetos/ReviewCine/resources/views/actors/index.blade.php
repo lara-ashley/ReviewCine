@@ -8,7 +8,6 @@
 </head>
 <body class="bg-gray-100 min-h-screen p-6">
 
-    <!-- Cabeçalho com CRUs -->
     <nav class="bg-indigo-600 text-white px-6 py-4 rounded-xl shadow mb-8">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
             <h1 class="text-xl font-bold">🎬 ReviewCine - Atores</h1>
@@ -26,7 +25,6 @@
 
         <h1 class="text-4xl font-extrabold text-blue-600 text-center mb-6">🎭 Lista de Atores</h1>
 
-        <!-- Botão Adicionar Ator -->
         <div class="text-center mb-6">
             <a href="{{ route('actors.create') }}"
                class="bg-blue-600 text-white font-bold px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl inline-block">
