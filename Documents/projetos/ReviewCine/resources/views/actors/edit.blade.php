@@ -8,7 +8,6 @@
 </head>
 <body class="bg-gray-100 min-h-screen p-6">
 
-    <!-- Cabeçalho com CRUDs -->
     <nav class="bg-indigo-600 text-white px-6 py-4 rounded-xl shadow mb-8">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
             <h1 class="text-xl font-bold">🎬 ReviewCine - Editar Ator</h1>
@@ -22,12 +21,10 @@
         </div>
     </nav>
 
-    <!-- Formulário de edição -->
     <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg mt-6">
 
         <h1 class="text-3xl font-extrabold text-blue-600 mb-6 text-center">✏️ Editar Ator</h1>
 
-        <!-- Mensagens de erro -->
         @if ($errors->any())
             <div class="bg-blue-100 text-blue-700 p-4 rounded mb-6">
                 <ul class="list-disc ml-5">
