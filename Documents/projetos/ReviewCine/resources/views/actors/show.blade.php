@@ -8,7 +8,6 @@
 </head>
 <body class="bg-gray-100 min-h-screen p-6">
 
-    <!-- Cabeçalho com CRUDs -->
     <nav class="bg-indigo-600 text-white px-6 py-4 rounded-xl shadow mb-8">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
             <h1 class="text-xl font-bold">🎬 ReviewCine - Atores</h1>
@@ -22,7 +21,6 @@
         </div>
     </nav>
 
-    <!-- Conteúdo do ator -->
     <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
         <h1 class="text-3xl font-extrabold text-blue-600 mb-6 text-center">
             🎭 Detalhes do Ator
