@@ -8,18 +8,22 @@
 </head>
 <body class="bg-blue-50 min-h-screen p-6">
 
-<nav class="bg-indigo-600 text-white px-6 py-4 rounded-xl shadow mb-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-        <h1 class="text-xl font-bold">🎬 ReviewCine</h1>
-        <div class="flex flex-wrap gap-2">
-            <a href="{{ route('movies.index') }}" class="bg-indigo-700 px-4 py-2 rounded-lg transition hover:bg-indigo-800">Filmes</a>
-            <a href="{{ route('actors.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Atores</a>
-            <a href="{{ route('filmmakers.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Cineastas</a>
-            <a href="{{ route('genres.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Gêneros</a>
-            <a href="{{ route('profile.edit') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Perfil</a>
+    <nav class="bg-indigo-600 text-white px-6 py-4 rounded-xl shadow mb-8">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <h1 class="text-xl font-bold">
+                <a href="{{ route('dashboard') }}" class="flex items-center gap-2 hover:text-indigo-100">
+                    🎬 ReviewCine
+                </a>
+            </h1>
+            <div class="flex flex-wrap gap-2">
+                <a href="{{ route('movies.index') }}" class="bg-indigo-700 px-4 py-2 rounded-lg transition hover:bg-indigo-800">Filmes</a>
+                <a href="{{ route('actors.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Atores</a>
+                <a href="{{ route('filmmakers.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Cineastas</a>
+                <a href="{{ route('genres.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Gêneros</a>
+                <a href="{{ route('profile.edit') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Perfil</a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 <div class="max-w-5xl mx-auto">
 
@@ -33,7 +37,7 @@
     @endif
 
     @if ($errors->any())
-        <div class="bg-red-100 border border-red-400 text-red-700 p-4 rounded-xl mb-6">
+        <div class="bg-blue-100 border border-blue-400 text-blue-700 p-4 rounded-xl mb-6">
             <ul class="list-disc ml-5">
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>

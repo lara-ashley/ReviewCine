@@ -6,20 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-
     public function up(): void
     {
-        Schema::create('genre_movie', function (Blueprint $table) {
+        Schema::create('filmmaker_movie', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('filmmaker_id')->constrained()->onDelete('cascade');
             $table->foreignId('movie_id')->constrained()->onDelete('cascade');
-            $table->foreignId('genre_id')->constrained()->onDelete('cascade');
-            $table->timestamps();
         });
     }
 
-
     public function down(): void
     {
-        Schema::dropIfExists('genre_movie');
+        Schema::dropIfExists('filmmaker_movie');
     }
 };

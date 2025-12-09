@@ -10,7 +10,11 @@
 
     <nav class="bg-indigo-600 text-white px-6 py-4 rounded-xl shadow mb-8">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-            <h1 class="text-xl font-bold">🎬 ReviewCine - Editar Cineasta</h1>
+            <h1 class="text-xl font-bold">
+                <a href="{{ route('dashboard') }}" class="flex items-center gap-2 hover:text-indigo-100">
+                    🎬 ReviewCine
+                </a>
+            </h1>      
             <div class="flex flex-wrap gap-2">
                 <a href="{{ route('movies.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Filmes</a>
                 <a href="{{ route('actors.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Atores</a>

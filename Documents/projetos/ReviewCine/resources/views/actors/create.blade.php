@@ -8,11 +8,14 @@
 </head>
 <body class="bg-gray-100 min-h-screen p-6">
 
-    <!-- Cabeçalho com CRUDs -->
     <nav class="bg-indigo-600 text-white px-6 py-4 rounded-xl shadow mb-8">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-            <h1 class="text-xl font-bold">🎬 ReviewCine - Adicionar Ator</h1>
-            <div class="flex flex-wrap gap-2">
+            <h1 class="text-xl font-bold">
+                <a href="{{ route('dashboard') }}" class="flex items-center gap-2 hover:text-indigo-100">
+                    🎬 ReviewCine
+                </a>
+            </h1>
+                <div class="flex flex-wrap gap-2">
                 <a href="{{ route('movies.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Filmes</a>
                 <a href="{{ route('actors.index') }}" class="bg-indigo-700 px-4 py-2 rounded-lg transition">Atores</a>
                 <a href="{{ route('filmmakers.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Cineastas</a>
@@ -22,21 +25,18 @@
         </div>
     </nav>
 
-    <!-- Formulário de criação -->
     <div class="w-full max-w-2xl mx-auto bg-white p-10 rounded-2xl shadow-xl">
 
         <h1 class="text-3xl font-extrabold text-blue-600 mb-8 text-center flex items-center justify-center gap-2">
             <span>➕</span> Adicionar Ator
         </h1>
 
-        <!-- Mensagem de sucesso -->
         @if(session('sucesso'))
             <div class="bg-blue-100 border border-blue-400 text-blue-700 p-4 rounded-xl mb-6">
                 {{ session('sucesso') }}
             </div>
         @endif
 
-        <!-- Mensagens de erro -->
         @if ($errors->any())
             <div class="bg-blue-100 border border-blue-400 text-blue-700 p-4 rounded-xl mb-6">
                 <ul class="list-disc pl-5">

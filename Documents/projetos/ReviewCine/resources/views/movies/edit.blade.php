@@ -10,9 +10,13 @@
 
     <nav class="bg-indigo-600 text-white px-6 py-4 rounded-xl shadow mb-8">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-            <h1 class="text-xl font-bold">🎬 ReviewCine</h1>
+            <h1 class="text-xl font-bold">
+                <a href="{{ route('dashboard') }}" class="flex items-center gap-2 hover:text-indigo-100">
+                    🎬 ReviewCine
+                </a>
+            </h1>
             <div class="flex flex-wrap gap-2">
-                <a href="{{ route('movies.index') }}" class="bg-indigo-700 px-4 py-2 rounded-lg transition">Filmes</a>
+                <a href="{{ route('movies.index') }}" class="bg-indigo-700 px-4 py-2 rounded-lg transition hover:bg-indigo-800">Filmes</a>
                 <a href="{{ route('actors.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Atores</a>
                 <a href="{{ route('filmmakers.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Cineastas</a>
                 <a href="{{ route('genres.index') }}" class="bg-indigo-500 hover:bg-indigo-700 px-4 py-2 rounded-lg transition">Gêneros</a>
@@ -43,7 +47,7 @@
                         class="w-full border p-3 rounded-lg focus:ring focus:ring-blue-200 @error('titulo') border-red-500 @enderror"
                         value="{{ old('titulo', $filme->titulo) }}">
                     @error('titulo')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                        <p class="text-blue-600 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -53,7 +57,7 @@
                         class="w-full border p-3 rounded-lg focus:ring focus:ring-blue-200 @error('data_lancamento') border-red-500 @enderror"
                         value="{{ old('data_lancamento', $filme->data_lancamento) }}">
                     @error('data_lancamento')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                        <p class="text-blue-600 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -63,7 +67,7 @@
                         class="w-full border p-3 rounded-lg focus:ring focus:ring-blue-200 @error('onde_assistir') border-red-500 @enderror"
                         value="{{ old('onde_assistir', $filme->onde_assistir) }}">
                     @error('onde_assistir')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                        <p class="text-blue-600 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -72,7 +76,7 @@
                     <textarea name="sinopse" rows="4"
                         class="w-full border p-3 rounded-lg focus:ring focus:ring-blue-200 @error('sinopse') border-red-500 @enderror">{{ old('sinopse', $filme->sinopse) }}</textarea>
                     @error('sinopse')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                        <p class="text-blue-600 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -89,7 +93,7 @@
                     </select>
                     <small class="text-blue-500">Segure CTRL para selecionar vários.</small>
                     @error('filmmaker_id')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                        <p class="text-blue-600 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -106,7 +110,7 @@
                     </select>
                     <small class="text-blue-500">Segure CTRL para selecionar vários atores.</small>
                     @error('actors')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                        <p class="text-blue-600 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -123,7 +127,7 @@
                     </select>
                     <small class="text-blue-500">Segure CTRL para selecionar vários gêneros.</small>
                     @error('genres')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                        <p class="text-blue-600 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 

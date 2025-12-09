@@ -48,14 +48,12 @@ class ActorController extends Controller
 
     public function update(Request $request, Actor $actor)
     {
-        // Validação dos campos
         $request->validate([
             'name' => 'required|string|max:255',
             'birthdate' => 'required|date',
             'bio' => 'nullable|string',
         ]);
 
-        // Atualiza apenas os campos validados
         $actor->update([
             'name' => $request->name,
             'birthdate' => $request->birthdate,
